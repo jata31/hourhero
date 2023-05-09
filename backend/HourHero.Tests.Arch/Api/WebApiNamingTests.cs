@@ -10,7 +10,7 @@ public class WebApiNamingTests
     [Test]
     public void RequestNamingTest()
     {
-        IArchRule rule = Classes().That().ResideInNamespace("{HourHero}.Api.Contracts.*.Requests")
+        IArchRule rule = Classes().That().ResideInNamespace("HourHero.Api.Contracts.*.Requests")
             .Should().HaveNameEndingWith("Request");
 
         rule.Check(StaticTestVariables.Architecture);
@@ -19,7 +19,7 @@ public class WebApiNamingTests
     [Test]
     public void ResponseNamingTest()
     {
-        IArchRule rule = Classes().That().ResideInNamespace("{HourHero}.Api.Contracts.*.Responses")
+        IArchRule rule = Classes().That().ResideInNamespace("HourHero.Api.Contracts.*.Responses")
             .Should().HaveNameEndingWith("Response");
 
         rule.Check(StaticTestVariables.Architecture);
@@ -28,7 +28,7 @@ public class WebApiNamingTests
     [Test]
     public void ControllerNamingTest()
     {
-        IArchRule rule = Classes().That().ResideInNamespace("{HourHero}.Api.Controllers")
+        IArchRule rule = Classes().That().ResideInNamespace("HourHero.Api.Controllers")
             .Should().HaveNameEndingWith("Controller");
 
         rule.Check(StaticTestVariables.Architecture);

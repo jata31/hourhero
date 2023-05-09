@@ -15,7 +15,7 @@ public class ApplicationInterfaceTests
             .That().AreDeclaredIn(
                 Types()
                     .That()
-                    .ResideInNamespace("{HourHero}.Application")
+                    .ResideInNamespace("HourHero.Application")
             )
             .And().AreNoConstructors()
             .And().ArePublic()

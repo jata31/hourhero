@@ -11,7 +11,7 @@ public class WebApiInheritanceTests
     [Test]
     public void ControllerInheritanceTest()
     {
-        IArchRule rule = Classes().That().ResideInNamespace("{HourHero}.Api.Controllers")
+        IArchRule rule = Classes().That().ResideInNamespace("HourHero.Api.Controllers")
             .Should().BeAssignableTo(typeof(BaseController));
 
         rule.Check(StaticTestVariables.Architecture);

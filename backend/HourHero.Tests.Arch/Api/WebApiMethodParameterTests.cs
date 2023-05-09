@@ -13,7 +13,7 @@ public class WebApiMethodParameterTests
     {
         MethodMembersShouldConjunction rule = MethodMembers()
             .That().AreDeclaredIn(Classes().That()
-                .ResideInNamespace("{HourHero}.Api.Controllers"))
+                .ResideInNamespace("HourHero.Api.Controllers"))
             .And().AreNoConstructors()
             .Should().FollowCustomCondition(m => m.Parameters.Any(t => t.IsAssignableTo("System.Threading.CancellationToken")),
                 "has a cancellation token",

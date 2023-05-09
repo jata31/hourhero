@@ -10,7 +10,7 @@ public class DomainTypeTests
     [Test]
     public void EnumTypeTest()
     {
-        IArchRule rule = Classes().That().ResideInNamespace("{HourHero}.Domain.Enums").Should().BeEnums();
+        IArchRule rule = Classes().That().ResideInNamespace("HourHero.Domain.Enums").Should().BeEnums();
 
         rule.Check(StaticTestVariables.Architecture);
     }

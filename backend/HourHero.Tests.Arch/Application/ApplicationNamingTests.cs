@@ -12,7 +12,7 @@ public class ApplicationNamingTests
     {
         IArchRule rule = Classes()
             .That()
-            .ResideInNamespace("{HourHero}.Application.Services")
+            .ResideInNamespace("HourHero.Application.Services")
             .Should()
             .HaveName("[A-Za-z]Service(`\\d)?", true);
 
@@ -22,7 +22,7 @@ public class ApplicationNamingTests
     [Test]
     public void AbstractionNamingTest()
     {
-        IArchRule rule = Interfaces().That().ResideInNamespace("{HourHero}.Application.Abstractions").Should()
+        IArchRule rule = Interfaces().That().ResideInNamespace("HourHero.Application.Abstractions").Should()
             .HaveNameStartingWith("I");
 
         rule.Check(StaticTestVariables.Architecture);
@@ -31,7 +31,7 @@ public class ApplicationNamingTests
     [Test]
     public void ExceptionNamingTest()
     {
-        IArchRule rule = Classes().That().ResideInNamespace("{HourHero}.Application.Exception").Should()
+        IArchRule rule = Classes().That().ResideInNamespace("HourHero.Application.Exception").Should()
             .HaveNameEndingWith("Exception");
 
         rule.Check(StaticTestVariables.Architecture);
@@ -42,7 +42,7 @@ public class ApplicationNamingTests
     {
         IArchRule rule = Classes()
             .That()
-            .ResideInNamespace("{HourHero}.Application.Repositories")
+            .ResideInNamespace("HourHero.Application.Repositories")
             .Should()
             .HaveName("I[A-Za-z]Repository(`\\d)?", true);
 

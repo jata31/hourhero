@@ -10,7 +10,7 @@ public class DomainInheritanceTests
     [Test]
     public void ExceptionInheritanceTest()
     {
-        IArchRule rule = Classes().That().ResideInNamespace("{HourHero}.Domain.Exception").Should().BeAssignableTo(typeof(Exception));
+        IArchRule rule = Classes().That().ResideInNamespace("HourHero.Domain.Exception").Should().BeAssignableTo(typeof(Exception));
 
         rule.Check(StaticTestVariables.Architecture);
     }

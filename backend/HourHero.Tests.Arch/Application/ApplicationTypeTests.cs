@@ -11,7 +11,7 @@ public class ApplicationTypeTests
     [Test]
     public void AbstractionTypeTest()
     {
-        IArchRule rule = Classes().That().ResideInNamespace("{HourHero}.Application.Abstractions").Should().Be(typeof(Interface));
+        IArchRule rule = Classes().That().ResideInNamespace("HourHero.Application.Abstractions").Should().Be(typeof(Interface));
 
         rule.Check(StaticTestVariables.Architecture);
     }
@@ -19,7 +19,7 @@ public class ApplicationTypeTests
     [Test]
     public void RepositoryTypeTest()
     {
-        IArchRule rule = Classes().That().ResideInNamespace("{HourHero}.Application.Repositories").Should().Be(typeof(Interface));
+        IArchRule rule = Classes().That().ResideInNamespace("HourHero.Application.Repositories").Should().Be(typeof(Interface));
 
         rule.Check(StaticTestVariables.Architecture);
     }
