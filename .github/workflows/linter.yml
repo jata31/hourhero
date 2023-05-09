@@ -1,0 +1,11 @@
+on: [push]
+
+name: Linter
+
+jobs:
+  lint:
+    name: 🚓 Lint project
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: ./flexlint

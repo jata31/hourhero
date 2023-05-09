@@ -1,0 +1,47 @@
+[[rules]]
+name      = "var -> explicit type"
+pattern   = '(?m)var\s'
+forbidden = '(?m)var\s'
+hint      = "Don't use var to declare variables, use the explicit type instead."
+includes  = ["**/*.cs"]
+excludes  = ["**/obj/**/*", "**/bin/**/*"]
+
+[[rules]]
+name      = "No regions"
+pattern   = '(?m)#region'
+forbidden = '(?m)#region'
+hint      = "Don't use regions."
+includes  = ["**/*.cs"]
+excludes  = ["**/obj/**/*", "**/bin/**/*"]
+
+[[rules]]
+name      = "Comments on line above"
+pattern   = '(?m)^.+?;[ \t]+?'
+forbidden = '(?m)^.+?;[ \t]+?//'
+hint      = "Put comments on the line above."
+includes  = ["**/*.cs"]
+excludes  = ["**/obj/**/*", "**/bin/**/*"]
+
+[[rules]]
+name      = "Don't check for null using == or != operators"
+pattern   = '(==|!=)\s*null'
+forbidden = '(==|!=)\s*null'
+hint      = "Don't check for null using == or != operators. Compare using is/is not null instead."
+includes  = ["**/*.cs"]
+excludes  = ["**/obj/**/*", "**/bin/**/*"]
+
+[[rules]]
+name      = "Don't use new CancellationToken()"
+pattern   = 'new\s+CancellationToken\s*\('
+forbidden = 'new\s+CancellationToken\s*\('
+hint      = "Don't use new CancellationToken(). Use the CancellationToken from the request or use CancellationToken.None."
+includes  = ["**/*.cs"]
+excludes  = ["**/obj/**/*", "**/bin/**/*"]
+
+[[rules]]
+name      = "Don't use as object as"
+pattern   = 'as\s+object\s+as'
+forbidden = 'as\s+object\s+as'
+hint      = "Don't use as object as. Use an explicit conversion instead."
+includes  = ["**/*.cs"]
+excludes  = ["**/obj/**/*", "**/bin/**/*"]

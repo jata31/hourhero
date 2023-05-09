@@ -1,0 +1,16 @@
+version: 2
+updates:
+  - package-ecosystem: "nuget"
+    directory: "backend"
+    schedule:
+      interval: "daily"
+      time: "06:00"
+      timezone: "Europe/Berlin"
+    allow:
+      - dependency-type: "all"
+    labels:
+      - "nuget"
+      - "dependabot"
+    open-pull-requests-limit: 100
+    reviewers:
+      - "jakob4unizell"
