@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Folder Include="Infrastructure"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="GitHubActionsTestLogger" Version="2.0.1">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.4.1"/>
+        <PackageReference Include="NUnit" Version="3.13.3"/>
+        <PackageReference Include="NUnit3TestAdapter" Version="4.3.1"/>
+        <PackageReference Include="TngTech.ArchUnitNET.NUnit" Version="0.10.5"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\HourHero.Application\HourHero.Application.csproj"/>
+        <ProjectReference Include="..\HourHero.Domain\HourHero.Domain.csproj"/>
+        <ProjectReference Include="..\HourHero.Infrastructure\HourHero.Infrastructure.csproj"/>
+        <ProjectReference Include="..\HourHero.Api\HourHero.Api.csproj"/>
+    </ItemGroup>
+
+</Project>
