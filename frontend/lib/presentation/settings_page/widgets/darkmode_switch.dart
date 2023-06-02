@@ -20,7 +20,8 @@ class DarkModeSwitch extends StatelessWidget {
             Switch(
                 activeColor: themeData.colorScheme.tertiary,
                 activeTrackColor: themeData.colorScheme.background,
-                value: themeService.isDarkModeOn, onChanged: (value) {
+                value: themeService.isDarkModeOn,
+                onChanged: (value) {
               Provider.of<ThemeService>(context, listen: false).toggleTheme();
             })
           ],

@@ -8,7 +8,6 @@ import 'package:routemaster/routemaster.dart';
 class SideBar extends StatefulWidget {
   final double sideBarWidth;
 
-
   const SideBar({Key? key, required this.sideBarWidth}) : super(key: key);
 
   @override
@@ -48,7 +47,8 @@ class _SideBarState extends State<SideBar> {
           ),
           IconButton(
             onPressed: () {
-              Routemaster.of(context).push(CalendarAndVacationPage.calendarandvacationPath);
+              Routemaster.of(context)
+                  .push(CalendarAndVacationPage.calendarandvacationPath);
             },
             icon: const Icon(Icons.calendar_month),
             tooltip: "Kalender und Urlaub",
@@ -63,7 +63,8 @@ class _SideBarState extends State<SideBar> {
           ),
           IconButton(
             onPressed: () {
-              Routemaster.of(context).push(ApplicationControlPage.applicationControlPath);
+              Routemaster.of(context)
+                  .push(ApplicationControlPage.applicationControlPath);
             },
             icon: const Icon(Icons.timer),
             tooltip: "Antragswesen",
@@ -75,6 +76,7 @@ class _SideBarState extends State<SideBar> {
           SizedBox(
             height: sizedBoxHeight,
           ),
+          const Spacer(),
           IconButton(
             onPressed: () {
               Routemaster.of(context).push(SettingsPage.settingsPagePath);
@@ -86,6 +88,9 @@ class _SideBarState extends State<SideBar> {
             "Einstellungen",
             style: TextStyle(fontSize: iconLabelFontSize),
           ),
+          const SizedBox(
+            height: 20,
+          )
         ],
       ),
     );

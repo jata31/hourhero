@@ -1,18 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:hourhero/presentation/core/widgets/page_scaffold.dart';
+import 'package:hourhero/presentation/start_page/widgets/custom_clock.dart';
 
 class StartPageItems extends StatelessWidget {
   const StartPageItems({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final themeData = Theme.of(context);
-    return Expanded(
-        child: Center(
-          child: Text(
-            "Willkommen Herr Albrecht",
-            style: themeData.textTheme.titleLarge,
-          ),
-        )
+    return const PageScaffold(
+        title: "Guten Morgen Herr Albrecht",
+        widget: CustomClock(),
     );
   }
 }
